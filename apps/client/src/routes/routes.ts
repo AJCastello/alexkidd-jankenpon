@@ -1,8 +1,11 @@
 // jay
-import { Navigate, Router } from "@jay-js/system";
+import { LazyModule, Navigate, Router } from "@jay-js/system";
 import { playerContext } from "../contexts/player/player.context";
-import { Lazy } from "../utils/Lazy";
 import { GameLayout } from "../layouts/game.layout";
+import { Home } from "../pages/Home";
+import { Lobby } from "../pages/Lobby";
+import { Battle } from "../pages/Battle";
+import { FindMatch } from "../pages/FindMatch";
 
 export function Routes(app: HTMLDivElement) {
   Router([
@@ -13,19 +16,19 @@ export function Routes(app: HTMLDivElement) {
       children: [
         {
           path: "/",
-          element: Lazy("Home")
+          element: Home
         },
         {
           path: "/lobby",
-          element: Lazy("Lobby")
+          element: Lobby
         },
         {
           path: "/battle",
-          element: Lazy("Battle")
+          element: Battle
         },
         {
           path: "/find-match",
-          element: Lazy("FindMatch")
+          element: FindMatch
         }
       ]
     },
