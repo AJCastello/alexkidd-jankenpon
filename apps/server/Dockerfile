@@ -1,4 +1,4 @@
-FROM node:20.15.0-alpine3.20 as builder
+FROM node:20.15.0-alpine3.20 AS builder
 RUN corepack enable
 
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY ./ ./
 
 RUN npm run build
 
-FROM node:20.15.0-alpine3.20 as release
+FROM node:20.15.0-alpine3.20 AS release
 
 WORKDIR /app
 
