@@ -1,0 +1,13 @@
+services:
+  server:
+    build: 
+      context: apps/server/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  client:
+    build: 
+      context: apps/client/
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
