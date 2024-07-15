@@ -7,15 +7,15 @@ import { GameController } from "../modules/game/game.controller";
 export const app = Fastify({ logger: true });
 
 export async function main() {
+  await app.register(fastifyCors, {
+    origin: "*",
+    methods: ["GET", "POST"]
+  });
+
   await app.register(fastifyWebsocket, {
     cors: {
       origin: "*"
     }
-  });
-
-  await app.register(fastifyCors, {
-    origin: "*",
-    methods: ["GET", "POST"]
   });
 
   const gameController = new GameController();
