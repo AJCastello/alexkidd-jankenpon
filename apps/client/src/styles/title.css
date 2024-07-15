@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  @apply m-0 p-0 text-6xl lg:text-9xl text-primary;
+  font-family: "Luckiest Guy", cursive;  
+  text-shadow: 
+    0 0.1em 20px rgba(102, 18, 53, 1), 0.05em -0.03em 0 rgba(102, 18, 53, 1),
+    0.05em 0.005em 0 rgba(102, 18, 53, 1), 0em 0.08em 0 rgba(102, 18, 53, 1),
+    0.05em 0.08em 0 rgba(102, 18, 53, 1), 0px -0.03em 0 rgba(102, 18, 53, 1),
+    -0.03em -0.03em 0 rgba(102, 18, 53, 1), -0.03em 0.08em 0 rgba(102, 18, 53, 1),
+    -0.03em 0 0 rgba(102, 18, 53, 1);
+}
+
+.title span {
+  @apply scale-90 inline-block;
+}
+
+.title span:first-child {
+  animation: Bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+.title span:last-child {
+  animation: BopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+.subtitle {  
+  @apply m-0 -mt-5 text-7xl text-white -rotate-6;
+  font-family: "Mr Dafoe";
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #661235, 0 0 0.3em #661235;
+}
+
+@keyframes Bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes BopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}

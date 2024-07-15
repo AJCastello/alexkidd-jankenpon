@@ -1,0 +1,111 @@
+
+.cloud-container{
+	position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.cloud {
+	width: 300px;
+	height: 200px;
+	position: relative;
+}
+
+.cloud-stroke {
+	position: absolute;
+	transform: scale(1.02);
+	top: 0;
+}
+
+.cloud-circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+}
+
+.cloud-move {
+  position: absolute;	
+  animation: cloudMove 0.5s infinite;
+}
+
+.cloud-stroke .cloud-circle {
+	background-color: #000;
+}
+
+.cloud-body {
+	z-index: 10;
+}
+
+.pos-0 {
+	top: 20px;
+	left: 30px
+}
+
+.pos-1 {
+	bottom: 10px;
+	left: 50px
+}
+
+.pos-2 {
+	bottom: 40px;
+	right: 20px
+}
+
+.pos-3 {
+	bottom: 10px;
+	right: 40px
+}
+
+.pos-4 {
+	bottom: 20px;
+	right: 90px
+}
+
+.pos-5 {
+	top: 10px;
+	right: 95px
+}
+
+.pos-6 {
+	top: 20px;
+	right: 40px
+}
+
+.pos-7 {
+	bottom: 40px;
+	left: 40px
+}
+
+.pos-8 {
+	border: 2px solid #000;
+	width: 30px;
+	height: 30px;
+	bottom: -20px;
+	left: 140px
+}
+
+.pos-9 {
+	border: 2px solid #000;
+	width: 20px;
+	height: 20px;
+	bottom: -50px;
+	left: 130px
+}
+
+.animate-delay-0 {
+	animation-delay: 0.3s
+}
+
+.animate-delay-1 {
+	animation-delay: 0.5s
+}
+
+@keyframes cloudMove {
+  0% { transform: scale(1, 1) rotate(0deg) }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9)  }
+    75% { transform: scale(0.95, 1.05); }
+  100% { transform: scale(1, 1) rotate(360deg); }
+  }

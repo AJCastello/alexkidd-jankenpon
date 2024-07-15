@@ -1,0 +1,149 @@
+.bounceInFadeIn {
+  animation: bounceInFadeIn 0.6s forwards ease-in-out;
+}
+
+@keyframes bounceInFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounceInTopFadeIn {
+  animation: bounceInTopFadeIn 1s forwards ease-in-out;
+}
+
+@keyframes bounceInTopFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+  70% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.jellyBounceOutTopFadeOut {
+  animation: jellyBounceOutTopFadeOut 2s forwards ease-out;
+}
+
+@keyframes jellyBounceOutTopFadeOut {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    transform: translateY(-10%) scaleY(0.9);
+  }
+  10% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: translateY(50%) scaleY(0.5);
+  }
+  25% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-500%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.jellyBounceOutLeftFadeOut {
+  animation: jellyBounceOutLeftFadeOut 2s forwards ease-out;
+}
+
+@keyframes jellyBounceOutLeftFadeOut {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    transform: translateX(-10%) scaleX(0.9);
+  }
+  10% {
+    transform: scaleX(1);
+  }
+  20% {
+    transform: translateX(50%) scaleX(0.5);
+  }
+  25% {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.jellyBounceInRightFadeIn {
+  animation: jellyBounceInRightFadeIn 2s forwards ease-in-out;
+}
+
+@keyframes jellyBounceInRightFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(500%);
+  }
+  15% {
+    transform: translateX(-50%) scaleX(0.5);
+  }
+  20% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: translateX(-10%) scaleX(0.9);
+  }
+  30% {
+    transform: translateX(0) scaleX(1);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {}
+}
+
+
+.jellyBouncing {
+  animation: jellyBouncing 1.2s ease-in-out infinite;
+}
+
+@keyframes jellyBouncing {
+  from,
+  to {
+    transform: scale(1, 1) translateY(0);
+  }
+  25% {
+    transform: scale(0.95, 1.05) translateY(-8px);
+  }
+   50% {
+    transform: scale(1.05, 0.95) translateY(10px);
+   }
+  75% {
+    transform: scale(0.97, 1.03) translateY(-6px);
+  } 
+}

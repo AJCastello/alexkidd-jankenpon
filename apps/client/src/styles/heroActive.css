@@ -1,0 +1,97 @@
+
+.hero-active {
+    position: relative;
+    isolation: isolate;
+    transition: all var(--spring-duration) var(--spring-easing);
+}
+
+.hero-active:hover:not(:active),
+.hero-active.active {
+    transition-duration: calc(var(--spring-duration)*0.5);
+}
+.hero-active:active {
+    transition-duration: calc(var(--spring-duration)*0.5);
+}
+
+.hero-active-shimmer {
+    position: absolute;
+    inset: -40px;
+    border-radius: inherit;
+    mask-image: conic-gradient(
+        from var(--shimmer, 0deg),
+        transparent 0%,
+        transparent 10%,
+        black 36%,
+        black 45%,
+        transparent 50%,
+        transparent 60%,
+        black 85%,
+        black 95%,
+        transparent 100%
+    );
+    mask-size: cover;
+    mix-blend-mode: plus-lighter;
+    animation: shimmer 1s linear infinite both;
+}
+.hero-active .hero-active-shimmer::before,
+.hero-active .hero-active-shimmer::after {
+    opacity: 1;
+    animation: shine 1.2s ease-in 1 infinite;
+}
+
+.hero-active-shimmer::before,
+.hero-active-shimmer::after {
+    transition: all 0.5s ease;
+    opacity: 0;
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    mix-blend-mode: color;
+    inset: 40px;
+    pointer-events: none;
+}
+
+
+.hero-active-shimmer.shimmer-player::before {
+    box-shadow: 0 0 3px 2px hsl(45deg 100% 80%),
+        0 0 7px 4px hsl(45deg 100% 50%),
+        0 0 13px 4px hsl(45deg 50% 70%),
+        0 0 25px 5px hsl(45deg 100% 70%);
+    z-index: -1;
+}
+
+.hero-active-shimmer.shimmer-player::after {
+    box-shadow: inset 0 0 0 1px hsl(45deg 70% 95%),
+        inset 0 0 2px 1px hsl(45deg 100% 80%),
+        inset 0 0 5px 2px hsl(45deg 100% 70%);
+    z-index: 2;
+}
+
+.hero-active-shimmer.shimmer-opponent::before {
+    box-shadow: 0 0 3px 2px hsl(0deg 100% 80%),
+        0 0 7px 4px hsl(0deg 100% 50%),
+        0 0 13px 4px hsl(0deg 50% 70%),
+        0 0 25px 5px hsl(0deg 100% 70%);
+    z-index: -1;
+}
+
+.hero-active-shimmer.shimmer-opponent::after {
+    box-shadow: inset 0 0 0 1px hsl(0deg 70% 95%),
+        inset 0 0 2px 1px hsl(0deg 100% 80%),
+        inset 0 0 5px 2px hsl(0deg 100% 70%);
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
